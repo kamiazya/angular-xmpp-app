@@ -1,0 +1,20 @@
+version: "3"
+services:
+  ejabberd:
+    image: ejabberd/ecs
+    ports:
+      - 5222:5222
+      # http://localhost:5280/admin/ 管理者画面
+      - 5280:5280
+    # volumes:
+    #   - ./ejabberd.yml:/home/ejabberd/conf/ejabberd.yml
+    #   - ./database:/home/ejabberd/database
+    # networks:
+    #   - frontend
+    # deploy:
+    #   replicas: 2
+    #   update_config:
+    #     parallelism: 2
+    #     delay: 10s
+    #   restart_policy:
+    #     condition: on-failure
